@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть»
 
 * Студент: [Павел Ярин](https://up.htmlacademy.ru/react/9/user/89187).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий (sench) Железцов](https://htmlacademy.ru/profile/sench).
 
 ---
 
