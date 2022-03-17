@@ -23,7 +23,7 @@ function App({films, reviews, title, genre, releaseDate}: AppProps): JSX.Element
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={AppRoute.Root} element={<MainPage title={title} genre={genre} releaseDate={releaseDate} />} />
+        <Route path={AppRoute.Root} element={<MainPage films={films} title={title} genre={genre} releaseDate={releaseDate} />} />
         <Route path={AppRoute.Login} element={<SignIn />} />
         <Route
           path={AppRoute.MyList}

@@ -1,6 +1,13 @@
 import {Film} from '../../types/film';
 
-function FilmCard({name, previewImage}: Film): JSX.Element {
+type FilmCardProps = {
+  film: Film,
+};
+
+function FilmCard(props: FilmCardProps): JSX.Element {
+  const {film} = props;
+  const {name, previewImage} = film;
+
   return (
     <article className="small-film-card catalog__films-card">
       <div className="small-film-card__image">
