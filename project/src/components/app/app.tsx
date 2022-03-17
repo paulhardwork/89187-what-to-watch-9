@@ -1,5 +1,7 @@
 import {AppRoute, AuthorizationStatus} from '../../const';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {Film} from '../../types/film';
+import {Review} from '../../types/review';
 import AddReview from '../add-review/add-review';
 import FilmPage from '../film-page/film-page';
 import MainPage from '../main-page/main-page';
@@ -10,12 +12,14 @@ import Player from '../player/player';
 import PrivateRoute from '../private-route/private-route';
 
 type AppProps = {
+  films: Film[],
+  reviews: Review[],
   title: string;
   genre: string;
   releaseDate: string;
 };
 
-function App({title, genre, releaseDate}: AppProps): JSX.Element {
+function App({films, reviews, title, genre, releaseDate}: AppProps): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
