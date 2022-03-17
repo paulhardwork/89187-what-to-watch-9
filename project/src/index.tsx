@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/app';
+import {films} from './mocks/films';
+import {reviews} from './mocks/reviews';
 
 const PromoFilmInfo = {
   TITLE: 'The Grand Budapest Hotel',
@@ -10,6 +12,6 @@ const PromoFilmInfo = {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App title={PromoFilmInfo.TITLE} genre={PromoFilmInfo.GENRE} releaseDate={PromoFilmInfo.RELEASEDATE} />
+    <App films={films} reviews={reviews} title={PromoFilmInfo.TITLE} genre={PromoFilmInfo.GENRE} releaseDate={PromoFilmInfo.RELEASEDATE} />
   </React.StrictMode>,
   document.getElementById('root'));
