@@ -2,14 +2,15 @@ import {Film} from '../../types/film';
 
 type FilmCardProps = {
   film: Film,
+  onMouseOver: () => void,
 };
 
 function FilmCard(props: FilmCardProps): JSX.Element {
-  const {film} = props;
+  const {film, onMouseOver} = props;
   const {name, previewImage} = film;
 
   return (
-    <article className="small-film-card catalog__films-card">
+    <article onMouseOver={onMouseOver} className="small-film-card catalog__films-card">
       <div className="small-film-card__image">
         <img src={previewImage} alt={name} width="280" height="175" />
       </div>
