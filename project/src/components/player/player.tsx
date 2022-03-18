@@ -1,4 +1,13 @@
-function Player (): JSX.Element {
+import {Film} from '../../types/film';
+
+type PlayerProps = {
+  film: Film;
+};
+
+function Player (props: PlayerProps): JSX.Element {
+  const {film} = props;
+  const {runTime, name} = film;
+
   return (
     <div className="player">
       <video src="#" className="player__video" poster="img/player-poster.jpg"></video>
@@ -11,7 +20,7 @@ function Player (): JSX.Element {
             <progress className="player__progress" value="30" max="100"></progress>
             <div className="player__toggler" style={{left: '30%'}}>Toggler</div>
           </div>
-          <div className="player__time-value">1:30:29</div>
+          <div className="player__time-value">{runTime}</div>
         </div>
 
         <div className="player__controls-row">
@@ -21,7 +30,7 @@ function Player (): JSX.Element {
             </svg>
             <span>Play</span>
           </button>
-          <div className="player__name">Transpotting</div>
+          <div className="player__name">{name}</div>
 
           <button type="button" className="player__full-screen">
             <svg viewBox="0 0 27 27" width="27" height="27">

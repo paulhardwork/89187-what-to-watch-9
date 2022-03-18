@@ -28,14 +28,14 @@ function App({films, reviews, title, genre, releaseDate}: AppProps): JSX.Element
         <Route
           path={AppRoute.MyList}
           element={
-            <PrivateRoute authorizationStatus={AuthorizationStatus.NoAuth}>
-              <MyList />
+            <PrivateRoute authorizationStatus={AuthorizationStatus.Auth}>
+              <MyList films={films}/>
             </PrivateRoute>
           }
         />
         <Route path={AppRoute.Film} element={<FilmPage />} />
-        <Route path={AppRoute.Player} element={<Player />} />
-        <Route path={AppRoute.Review} element={<AddReview/>} />
+        <Route path={AppRoute.Player} element={<Player film={films[0]} />} />
+        <Route path={AppRoute.Review} element={<AddReview film={films[1]} />} />
         <Route path='*' element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
