@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import {Film} from '../../types/film';
 import Logo from '../logo/logo';
 import ReviewForm from '../review-form/review-form';
@@ -25,7 +26,7 @@ function AddReview (props: AddReviewProps): JSX.Element {
           <nav className="breadcrumbs">
             <ul className="breadcrumbs__list">
               <li className="breadcrumbs__item">
-                <a href="film-page.html" className="breadcrumbs__link">{name}</a>
+                <Link to="/" className="breadcrumbs__link">{name}</Link>
               </li>
               <li className="breadcrumbs__item">
                 <a className="breadcrumbs__link">Add review</a>
