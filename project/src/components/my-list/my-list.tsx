@@ -1,6 +1,7 @@
+import {Link} from 'react-router-dom';
 import {Film} from '../../types/film';
-import Logo from '../logo/logo';
 import Footer from '../footer/footer';
+import Logo from '../logo/logo';
 
 type MyListProps = {
   films: Film[];
@@ -39,7 +40,7 @@ function MyList (props: MyListProps): JSX.Element {
                   <img src={previewImage} alt={name} width="280" height="175" />
                 </div>
                 <h3 className="small-film-card__title">
-                  <a className="small-film-card__link" href="film-page.html">{name}</a>
+                  <Link to={`film/${id}`} className="small-film-card__link">{name}</Link>
                 </h3>
               </article>
             ))}
