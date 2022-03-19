@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import Footer from '../footer/footer';
 import Logo from '../logo/logo';
 
@@ -49,7 +50,7 @@ function FilmPage (): JSX.Element {
                   </svg>
                   <span>My list</span>
                 </button>
-                <a href="add-review.html" className="btn film-card__button">Add review</a>
+                <Link to="./review" className="btn film-card__button">Add review</Link>
               </div>
             </div>
           </div>
