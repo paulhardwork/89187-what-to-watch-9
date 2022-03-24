@@ -3,11 +3,11 @@ import {useEffect, useRef} from 'react';
 type CardPlayerProps = {
   src: string,
   poster: string,
-  mouseOver: boolean,
+  isHover: boolean,
 }
 
 function CardPlayer (props: CardPlayerProps) {
-  const {mouseOver, src, poster} = props;
+  const {isHover, src, poster} = props;
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -15,12 +15,12 @@ function CardPlayer (props: CardPlayerProps) {
       return;
     }
 
-    if (mouseOver) {
+    if (isHover) {
       videoRef.current.play();
     } else {
       videoRef.current.load();
     }
-  }, [mouseOver]);
+  }, [isHover]);
 
   return (
     <video

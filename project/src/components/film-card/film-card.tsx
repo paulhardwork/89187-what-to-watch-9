@@ -13,21 +13,28 @@ function FilmCard (props: FilmCardProps): JSX.Element {
   const {film, onMouseOver} = props;
   const {id, name, previewImage, previewVideoLink} = film;
 
-  const [isMouseOver, setIsMouseOver] = useState(false);
+  const [isHover, setIsHover] = useState(false);
+
+  let videoDelay: NodeJS.Timeout;
 
   return (
     <article
-      onMouseOver={() => {
-        setIsMouseOver(true);
-        onMouseOver();
-      }}
+      onMouseOver={
+        () => {
+          videoDelay = setTimeout(() => {
+            setIsHover(true);
+            onMouseOver();
+          }, 1000);
+        }
+      }
       onMouseOut={() => {
-        setIsMouseOver(false);
+        clearTimeout(videoDelay);
+        setIsHover(false);
       }}
       className="small-film-card catalog__films-card"
     >
       <div className="small-film-card__image">
-        <CardPlayer mouseOver={isMouseOver} src={previewVideoLink} poster={previewImage} />
+        <CardPlayer isHover={isHover} src={previewVideoLink} poster={previewImage} />
       </div>
       <h3 className="small-film-card__title">
         <Link className="small-film-card__link" to={`film/${id}`}>{name}</Link>
