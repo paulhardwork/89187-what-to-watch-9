@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import {Link} from 'react-router-dom';
+import {PREVIEW_DELAY} from '../../const';
 import {Film} from '../../types/film';
 import CardPlayer from '../card-player/card-player';
 
@@ -24,7 +25,7 @@ function FilmCard (props: FilmCardProps): JSX.Element {
           videoDelay = setTimeout(() => {
             setIsHover(true);
             onMouseOver();
-          }, 1000);
+          }, PREVIEW_DELAY);
         }
       }
       onMouseOut={() => {
