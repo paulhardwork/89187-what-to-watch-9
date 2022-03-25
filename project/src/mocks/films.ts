@@ -22,7 +22,7 @@ export const films: Film[] = [
     id: 1,
     isFavorite: true,
     videoLink: 'https://9.react.pages.academy/static/film/video/bubbles.mp4',
-    previewVideoLink: 'https://9.react.pages.academy/static/film/video/dog.mp4',
+    previewVideoLink: 'https://9.react.pages.academy/static/film/video/bubbles.mp4',
   },
   {
     name: 'Legend',
@@ -45,7 +45,7 @@ export const films: Film[] = [
     id: 2,
     isFavorite: false,
     videoLink: 'https://9.react.pages.academy/static/film/video/bubbles.mp4',
-    previewVideoLink: 'https://9.react.pages.academy/static/film/video/dog.mp4',
+    previewVideoLink: 'https://9.react.pages.academy/static/film/video/bubbles.mp4',
   },
   {
     name: 'No Country for Old Men',
@@ -68,7 +68,7 @@ export const films: Film[] = [
     id: 3,
     isFavorite: false,
     videoLink: 'https://9.react.pages.academy/static/film/video/bike.mp4',
-    previewVideoLink: 'https://9.react.pages.academy/static/film/video/dog.mp4',
+    previewVideoLink: 'https://9.react.pages.academy/static/film/video/bubbles.mp4',
   },
   {
     name: 'Once Upon a Time in America',
@@ -114,7 +114,7 @@ export const films: Film[] = [
     id: 5,
     isFavorite: true,
     videoLink: 'https://9.react.pages.academy/static/film/video/matrix.mp4',
-    previewVideoLink: 'https://9.react.pages.academy/static/film/video/dog.mp4',
+    previewVideoLink: 'https://9.react.pages.academy/static/film/video/bubbles.mp4',
   },
   {
     name: 'Shutter Island',
@@ -137,7 +137,7 @@ export const films: Film[] = [
     id: 6,
     isFavorite: false,
     videoLink: 'https://9.react.pages.academy/static/film/video/bubbles.mp4',
-    previewVideoLink: 'https://9.react.pages.academy/static/film/video/dog.mp4',
+    previewVideoLink: 'https://9.react.pages.academy/static/film/video/bubbles.mp4',
   },
   {
     name: 'Bronson',
@@ -183,6 +183,6 @@ export const films: Film[] = [
     id: 8,
     isFavorite: true,
     videoLink: 'https://9.react.pages.academy/static/film/video/bubbles.mp4',
-    previewVideoLink: 'https://9.react.pages.academy/static/film/video/dog.mp4',
+    previewVideoLink: 'https://9.react.pages.academy/static/film/video/matrix.mp4',
   },
 ];

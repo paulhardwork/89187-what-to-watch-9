@@ -13,3 +13,5 @@ export enum AuthorizationStatus {
   Unknown = 'UNKNOWN',
 }
 
+export const PREVIEW_DELAY = 1000;
+
